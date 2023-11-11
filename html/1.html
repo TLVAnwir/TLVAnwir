@@ -1,0 +1,143 @@
+#Cấu trúc cơ bản cần có của html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf8"/>
+    <link rel="stylesheet" type="text/css" href="đường dẫn tới file css" />
+    <title>Tiêu đề</title>
+    <meta name="viewport" content=""width="device-width,initial-scale=1"/>
+  </head> 
+  <body>
+    "nội dung"
+  </body> 
+</html>
+#Ngắt đoạn <p> </p> sẽ tự động cách thêm 1 dòng
+vd: ha
+    
+    hi
+#in nghiêng <i> </i>
+#in đậm <b> </b>
+#ngắt dòng <br /> (phải có dấu cách trước /) k cách 1 dòng như <p> </p>
+vd: ha
+    hi
+trong cùng 1 thư mục muốn từ thư mục này qua thư mục kia dùng ./ 
+vd: có 2 file A và B trong cùng 1 thư mục
+muốn từ A qua B thì ./B
+khác thư mục mà thoát khỏi thư mục này để đến thư mục kia thì dùng ../
+vd: ổ C có 2 thư mục 1 và 2 
+thư mục 1 có A và B
+thư mục 2 có C và D
+muốn từ C trong thư mục 2 qua A trong thư mục 1 thì cần ../thư mục 1/A
+căn giữa <center></center>
+Cấu trúc liên kết
+<a href="./2.html">hihi</a>
+chèn hình ảnh <img src ="./download.jpg" /> 
+tạo siêu liên kết
+<img src ="./download.jpg" usemap ="#hi" />
+<map name ="hi" >
+  <area shape="rect"(vùng liên kết) coords ="222,111,333,111"(HCN abcd thì đây là vị trí x, y của a và c) href ="./1.html" />
+
+</map>
+
+href là url kiểu link
+
+tạo bảng
+<table border="1" cellspacing="0" cellpadding="10"> ( border :đóng khung cột và hàng, cellspacing độ dày viền khung)
+  <tr>
+    <td rowspan="2">Họ và tên </td>
+    <td colspan="2">Giới Tính </td>
+  </tr>
+  <tr>
+    <td>Nam </td>
+    <td>Nữ </td>
+
+  </tr>
+</table>
+rowspan là 2 dòng được gộp thành 1
+colspan là 2 cột được gộp thành 1
+
+chèn video và âm thanh
+<video controls="controls">
+  <source src ="./Đầu tư 2.mp4" type="video/mp4" />
+</video>
+<audio controls="controls">
+  <source src="./hihi.mp3" type="audio/mpeg" />
+</audio>
+1 số kiểu type
+mp4 => video/mp4
+ogg =>video/ogg
+mp3 => audio/mpeg
+wav => audio/wav
+
+Tạo form
+
+<form>
+  <p>
+    Đây là textbox
+  <input type="text"/> <br />
+  </p>
+  <p>
+    Đây là checkbox
+  <input type="checkbox"/> <br />
+  </p>
+  <p>
+    Đây là chọn file
+    <input type="file" />
+  </p>
+  <p>
+    Đây là radiocheck <br />
+  <input type="radio" name="gender" checked="checked"/> male <br />
+  <input type="radio" name="gender" checked="checked"/> female
+  </p>
+  <select>
+    <optgroup label="Anwir" />
+      <option>Leesin</option>
+      <option>Katarina</option>
+      <option>Malphite </option>
+    <optgroup label="Andy" />
+      <option>Yasuo</option>
+      <option>Kaisa</option>
+      <option>Jayce</option>
+  </select>
+  <br />
+  <textarea>hahahha</textarea>
+</form>
+<p>Đây là IFrame </p>
+<iframe src="./1.html" width="500" height="300" frameborder="1" />
+
+
+IFrame
+<p>Đây là IFrame </p>
+<iframe src="./1.html" width="500" height="300" frameborder="1" />
+
+id + css
+<p id="1">Với những nền tảng gây dựng được trong 6 năm qua cùng cú huých từ thương vụ niêm yết trên sàn</p>
+<p id="2">Với những nền tảng gây dựng được trong 6 năm qua cùng cú huých từ thương vụ niêm yết trên sàn</p>
+#1{
+  font-weight:bold;
+  font-size:20px; 
+}
+1 số selector trong css cần nhớ
+<img src ="./Untiled.jpg" /> 
+cách chèn link vào nội dung
+<a href="(link)">nội dung cần chèn link</a>
+
+lấy thông tin người dùng
+<form>
+  <label>Điền tên bạn vào đây</label>
+  <input type="text" placeholder="Tên mình là"/>
+</form>
+thu nhỏ ảnh thêm thuộc tính width
+
+<ul></ul> tạo ra danh sách lần lượt dấu chấm 
+vd:
+<ul>Sở thích của t là:</ul>
+  <li>Ăn</li>
+  <li>game</li>
+  <li>code</li>
+
+  các type của input thì search mạng
+
+<nav>( kiểu dạng như menu ấn vào thì màn hình chuyển sang phần chứa id đó)
+  <a href="#id">(phần cần đến)</a>
+</nav>

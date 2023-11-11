@@ -1,0 +1,264 @@
+cách 1: dùng <style> p{ ....}</style>
+cách 2: nhét vào từng phần riêng 
+vd: <p style="font-weight:bold; font-size:20px"
+cách 3: dùng file css riêng xong trèn vào file html = cú pháp
+<link type="text/css"  rel="stylesheet" href="tênfilecss.css" />
+
+Dùng id để thiết lập từng đoạn thì cần cú pháp bên css
+#(id){....}
+vd::
+#Anwir,#Andy{
+    font-weight:bold;
+    font-size:30px; 
+}
+1 số thuộc tính cơ bản của css
+font-size là độ lớn font chữ tính = px
+font-weight là độ dày nét chữ là số hoặc text(bold(đậm) bolder(cực đậm)  lighter(mỏng))
+font-style dùng khi cần in nghiêng văn bản(italic(in nghiêng) oblique)
+color là màu của văn bản dùng mã màu(HEX) hoặc text(blue red)
+font-family loại font sử dụng như time new roman cần đặt vào dấu ""
+text-align canh lề văn bản (left right center justify(căn đều))
+width độ rộng tính = px
+height độ cao tính = px
+text-decoration dấu gạch như gạch chân(underline) gạch trên(oveline) hoặc có gạch sẵn thì dùng None để xóa
+lưu ý: id k được dùng số
+vd:
+#A{font-weight:bold;}
+#B{font-weight:bolder;}
+#C{font-weight:lighter;}
+#D{font-style:italic;}
+#E{color:#1c8c34;}
+#F{color:aliceblue;}
+#G{color:aqua;}
+#H{font-family:Arial, Helvetica, sans-serif;}
+#I{font-family:Georgia, 'Times New Roman', Times, serif;}
+#J{text-align:center;}
+#K{text-align:justify;}
+#L{text-align:left;}
+#M{text-align:right;}
+#N{text-decoration: overline;}
+#O{text-decoration: underline;}
+#P{text-decoration:line-through;}
+
+
+Thuộc tính 2D của css
+left để chỉ tọa độ chiều ngang(tính từ mép trái)
+right để chỉ tọa độ chiều ngang(tính từ mép phải)
+top để chỉ tọa độ chiều dọc(tính từ trên xuống)
+bottom để chỉ tọa độ chiều dọc(tính từ dưới lên)
+
+không gian 3 chiều trong css được quy định bởi z-index
+ai có z-index lớn hơn sẽ được chèn lên so vs z-index nhỏ hơn nếu trong 1 mặt phẳng
+vd:
+#A{
+    width:100px;
+    height:500px;
+    background-color: aqua;
+    position:absolute;
+    left:100px;
+    top:100px;
+    z-index:1;
+}
+#B{
+    width:100px;
+    height:100px;
+    background-color:blue;
+    position:absolute;
+    left:150px;
+    top:100px;
+    z-index:2; 
+}
+#C{
+    width:500px;
+    height:100px;
+    background-color:blueviolet;
+    position:absolute;
+    left:170px;
+    top:150px;
+    z-index:3; 
+}
+
+absolute sẽ cho thẻ html là viewbox.Tọa độ 2D tính theo thằng cha của nó 
+p là cha của i nếu p cách trái 100 cách trên 100
+mà xét tk i cách trái 100 cách trên 100 thì sẽ so với tk cha
+nghĩa là thực tế nó sẽ cách trái 200 cách trên 200
+vd:
+<p>
+    <i>
+
+
+relative sẽ theo quy tắc từ trên xuống là lấy gốc tọa độ là vị trị thực tế nếu k quy định tọa độ
+fixed sẽ cố định tọa độ theo màn hình
+dù cuộn chuột xuống hay lên thì nó vẫn thế
+
+Thuộc tính border tạo viền
+vd:
+border:10px solid blue: là tạo đường viền dày 10px màu xanh 
+border:10px dotted blue: tạo đường viền nét đứt dày 10px màu xanh
+
+border-radius:1px 2px 3px 4px là dùng để bẻ cong các góc của border có thể dùng để tạo hình tròn
+margin là tính từ biên ngoài 
+padding tính từ biên trong để quy định tọa độ  nên cả 2 có left right top bottom
+hoặc có thể dùng rút gọn như border
+biên này là đường viền quanh phần tử
+để liền viền sát vs góc trên và góc bên trái màn hình thì cần
+body{
+    margin:0;
+}
+opacity để quy định độ trong suốt giá trị 0->1 hiển thị phần quy định phần còn lại trong suốt
+display:inline-block sẽ biến các văn bản theo phù hợp với cửa sổ
+1 phần tử div nếu k quy định chiều dài hoặc chiều rộng thì nó sẽ tự động theo nội dung trong nó
+nếu dùng min thì giá trị nó k thể nhỏ hơn cái đó hoặc max thì k thể lớn hơn cái đó
+overflow có thể dùng riêng x,y tương ứng chiều ngang dọc dùng để hiển thị hoặc ẩn đi các nội dung bên ngoài div
+hidden ẩn các các nội dung nằm ngoài
+scroll tạo thanh cuộn cả x,y
+float căn trái hoặc phải của div
+
+text-transform dùng để chỉ định cách viết chữ của văn bản hoa thường và hoa chữ đầu
+text-indent chỉ định khoảng cách thụt đầu dòng đầu đoạn văn đơn vị px
+letter-spacing chỉ định khoảng cách giữa 2 chữ cái trong từ vd: A  N  W  I  R
+line-height chỉ định độ cao của 1 dòng
+word-spacing chỉ định khoảng cách giữa các từ vd: Andy       Anwir
+text-shadow tạo bóng đổ cho từng chữ cái
+có 4 giá trị x y z t lần lượt là độ lệch bên phải,bên dưới,độ nhòe,màu bóng đổ
+vd text-shadow:2px 2px 5px red;
+giá trị âm sẽ biểu thị ngược lại chức năng ban đầu vd -5px -6px 0px là quy định độ lệch bên trái bên trên
+quy định độ rộng của ảnh chèn vào
+vd: img{width:40px;}
+vertical-align có các giá trị text-(top bottom) để canh cho hình ảnh xếp cùng với chữ sao cho hợp lý
+3 thuộc tính đi cùng nhau để quy định phần chữ tràn ra khỏi phần cho phép và dòng đầu tiên sẽ hiện thị dấu 3 chấm
+overflow:hidden;
+text-overflow:ellipsis;
+white-space:nowrap;
+white-space sẽ hủy bỏ xuống dòng viết tất cả thành 1 dòng và phần k thấy được sẽ hiển thị dấu chấm nếu kết hợp cùng 3 thuộc tính kia
+tạo màu full màn hình
+body{
+    background-color: #8fdbe3;
+ }
+
+1 thẻ quan trọng hỏi trong phỏng vấn là box-sizing để quy định 1 div có width là 500 padding 100 thì 500 là bao gồm cả padding chứ k phải 600
+nên dùng
+* {
+    box-sizing:border-box;
+}
+
+selector nâng cao
+a:link{} chọn tất cả thẻ a chưa từng bị click
+a:active{} chọn tất cả thẻ a đã bị click và chuẩn bị chuyển trang
+a:visited{} chọn tất cả thẻ a đã từng bị click và chuyển trang
+#(id hoặc class):hover: css có tác dụng khi rê chuột lên đối tượng sẽ áp dụng thuộc tính quy định
+#(id hoặc class):focus áp dụng cho các thẻ input áp dụng thuộc tính cho input nào đang được trỏ chuột tới
+
+p:first-child chọn tất cả thẻ p là thẻ con đầu tiên trong thẻ cha(phải là thẻ đầu tiên k có thẻ nào trc đó)
+p:last-child chọn tất cả thẻ p là thẻ con cuối cùng trong thẻ cha
+p:first-of-type chọn tất cả thẻ p là thẻ p đầu tiên trong thẻ cha(k cần là thẻ đầu tiên trc đó có thể có thể có thẻ kp thẻ p)
+p:last-of-type chọn tất cả thẻ p là thẻ p cuối cùng của thẻ cha
+p:nth-child(2) chọn mọi thẻ p mà bẩn thân nó là thẻ con thứ 2 của thẻ cha
+p:nth-of-type(4) chọn mọi thẻ p mà bản thân nó là thẻ p thứ 4 của thẻ cha
+
+
+input:checked chọn mọi thẻ input đã được chọn
+input:valid chọn mọi thẻ input có giá trị đúng định dạng vd như nhập text đúng yêu cầu thì border sẽ có màu xanh
+input:invalid chọn mọi thẻ input có giá trị sai định dạng vd như nhập số vào input text thì border sẽ hiện màu đỏ
+input:in-range chọn mọi thẻ input có giá trị nằm trong vùng giới hạn vd range từ 1-10 mk nhập 8 là đúng thì sẽ báo đúng
+input:out-of-range chọn mọi thẻ input có giá trị ngoài vùng giới giạn được dùng như để kiểm tra dữ liệu
+input:read-only chọn mọi thẻ input ko được thay đổi
+input:read-write chọn mọi thẻ input được thay đổi
+input:required chọn mọi thẻ inpy ko được phép bỏ trống (có dấu *)
+input:optional chọn mọi thẻ input được phép bỏ trống
+cách dùng các cú pháp trên bên html cần <input type="text" read-only="read-only">cần dùng cái nào thì thêm vào
+
+div:empty chọn mỏi thẻ div k có thẻ con
+selector1:not(selector2) chọn mọi selector1 nhưng bỏ selector2
+selector::first-letter chọn ký tự đầu tiên của mọi selector
+selector::first-line chọn dòng đầu tiên của mọi selector
+selector::selection chọn phần đâng bị tô đen bởi người dùng
+
+div::before chèn thêm nội dung vào trước mọi thẻ div
+vd:
+div::before{
+    content:"nội dung cầnn chèn";
+    color: red;
+}
+chèn nội dung có màu đỏ vào trước mọi thẻ div
+div::after tương tư nhưng chèn vào sau mọi thẻ div vd chèn * vào sau mọi thẻ input ko được bỏ trống
+text-shadow bóng đổ của văn bản
+box-shadow bóng đổ kp text
+box-shadow: x y z t;
+x là độ lệch ngang âm là lệch trái dương lệch phải
+y là độ lệch đứng âm thì lệch trên dương thì lệch dưới
+z là độ nhòe màu của bóng đổ(đơn vị đo thường là px) càng lớn càng nhòe
+t là màu bóng đổ
+
+muốn sử dụng font lạ để đảm bảo thiết bị nào cx có font đó thì nên dùng
+
+/*nên dùng*/
+@font-face{
+    font-family:Anwir(đặt là gì cx được nếu có dấu cách phải cho vào "");
+    src: url("đường dẫn tới file font");
+}
+body{
+    font-family:giống với tên font đặt bên trên;
+}
+/*hạn chế*/
+sử dụng font lạ online nhưng bị ảnh hưởng bởi tốc độ mạng càng ngon load càng nhanh
+<link href="link font lấy trên google" rel="stylesheet"/>
+
+/*Chuyển Động 2D 3D */
+transition kết hợp vs id:hover tạo ra sự thay đổi như trỏ chuột vào chỗ div
+vd
+div{
+    width: 100px;
+    height:200px;
+    background-color:red;
+    transition:1s /*hoặc chỉ định riêng từng cái width 1s,weight 2s*/
+}
+div:hover{
+    width:200px;
+    height:400px;
+}
+
+thuộc tính của transition
+transition-delay: thêm độ trễ cho chuyển động
+transition-duration: thời gian chuyển động 
+transition-property:tên thuộc tính chịu ảnh hưởng transition(quy định riêng xem width hay height chịu ảnh hưởng)
+transition-timing-function:cách tạo chuyển động gồm các giá trị
++ease chậm nhanh chậm
++linear tốc độ không đổi
++ease-in nhanh dần
++ease-out(chậm dần),ease-in-out(chậm nhanh chậm), cubic-bezier(n,n,n,n)
+/*Transform 2D*/
+Transform:translate(x,y)
+x dương sang phải âm sang trái
+y dương lên trên âm xuống dưới
+
+Transform:rotate(độ (đơn vị deg))
+xoay phần tử 1 góc ()
+
+Transform:scale(X,Y);
+(tỉ lệ so với width height ban đầu vd 2 là gấp đôi so vs ban đầu)
+
+Transform:skew(x,y);
+tạo góc cho các cạnh
+
+/*Transform 3D*/
+Transform:rotate(x,y,z,độ)
+vd(1,0,1,45deg) tỉ lệ so vs 45deg
+
+setting phù hợp theo thiết bị
+float để căn chỉnh div sao cho hợp lý
+vd float:None; mặc định như word
+float:left; viết theo từng hàng
+các width và height nên dùng % để phù hợp từng kích thước cửa sổ
+thiết lập đk để phù hợp vs từng thiết bị
+@media media-type and danh sách điều kiện có thể có nhiều cách nhau = dấu and 
+vd
+body{color:green;}
+@media all and (max-width:500px;){body{color:red;}}
+màu văn bản ban đầu là xanh nhưng nếu đô rộng trình duyệt <500px thì đổi thành đỏ theo như điều kiện được viết
+thiết lập giá trị kích thước có thể thay đổi phù hợp cả trên đt và pc 
+chiều dài max từng thiết bị phải để lần lượt từ cao xuống thấp nếu ko sẽ bị ghi đè nên để nhỏ trước lớn
+
+1 số giá trị media 
+all áp dụng với mọi thiết bị
+screen áp dụng cho những thiết bị có hiển thị màn hình
