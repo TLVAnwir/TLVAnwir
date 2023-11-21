@@ -93,3 +93,4 @@ Andy.search("Anwir")=> giống indexOf nhưng có thể dùng regular expressing
 Andy.slide(start,end)=> cắt chuỗi con trong chuỗi Andy từ vị trí start tới trước vị trí end
 Andy.substr(start,length)=>cắt chuỗi con trong chuỗi Andy từ vị trí start lấy length kí tự
 Andy.split(" ") tìm các kí tự đc điền trong "" để cắt thành các mảng 
+prompt("Nhập tên b") => lấy dữ liệu đầu vào giống input
